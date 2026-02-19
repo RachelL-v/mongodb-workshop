@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Household Rota Manager</h1>
+        
+        <div class="form-section">
+            <h2>Add New Rota Item</h2>
+            
+            <form id="rotaForm">
+                <div class="form-group">
+                    <label for="name">Person's Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Enter name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Date (Auto-synced):</label>
+                    <div id="currentDate" class="date-display"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Duties:</label>
+                    <div class="duties-container" id="dutiesContainer">
+                        <!-- Checkboxes will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="form-group button-group">
+                    <button type="button" class="btn btn-random" id="randomBtn">🎲 Random Chore</button>
+                    <button type="submit" class="btn btn-submit">➕ Add to Rota</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="rota-section">
+            <h2>Current Rota</h2>
+            <div id="rotaList" class="rota-list">
+                <!-- Rota items will be loaded here -->
+            </div>
+            <div id="emptyMessage" class="empty-message">
+                No rota items yet. Add one above!
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

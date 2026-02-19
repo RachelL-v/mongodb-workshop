@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+h1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.form-section {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.rota-section {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.date-display {
+    padding: 12px;
+    background-color: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #667eea;
+    text-align: center;
+}
+
+.duties-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.duty-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.duty-checkbox:hover {
+    background-color: #e0e7ff;
+}
+
+.duty-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.duty-checkbox label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-random {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-random:hover {
+    background-color: #ffb300;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.rota-list {
+    display: grid;
+    gap: 15px;
+}
+
+.rota-item {
+    background-color: #f8f9fa;
+    border-left: 5px solid #667eea;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.rota-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(5px);
+}
+
+.rota-content {
+    flex: 1;
+}
+
+.rota-name {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.rota-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.rota-duties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.duty-tag {
+    background-color: #667eea;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.delete-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.delete-btn:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    font-size: 1.1em;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #ddd;
+}
+
+.rota-item.show {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+
+    .rota-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-btn {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .duties-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
